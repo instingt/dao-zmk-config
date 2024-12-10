@@ -51,7 +51,7 @@
             bindings = <
 &kp LC(F19)  &kp LA(F19)  &trans  &kp LG(LA(N5))  &kp LG(LC(LA(LEFT_ARROW)))  &trans         &kp LG(LC(LA(RIGHT)))    &kp C_VOL_UP    &kp HOME        &kp PSCRN  &kp PG_UP  &kp SLCK         &kp F19          &trans
              &trans       &trans  &trans          &kp LG(LA(LEFT))            &kp LG(LA(F))  &kp LG(LA(RIGHT))        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
-             &trans       &trans  &trans          &trans                      &trans         &trans                   &kp C_VOL_DN    &kp END         &none      &kp PG_DN  &kp PAUSE_BREAK  &trans
+             &trans       &trans  &trans          &kp LG(LS(RETURN))          &trans         &trans                   &kp C_VOL_DN    &kp END         &none      &kp PG_DN  &kp PAUSE_BREAK  &trans
                                                   &trans                      &trans         &lt ADJ RET              &lt ADJ ESC     &trans          &trans
             >;
         };
