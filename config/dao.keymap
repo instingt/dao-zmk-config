@@ -29,39 +29,57 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        mac {
             bindings = <
-&kp LWIN  &kp GRAVE  &kp Q  &kp W  &kp E        &kp R             &kp T          &kp Y          &kp U           &kp I        &kp O    &kp P     &kp LBKT       &mt RWIN RBKT
-          &kp LCTRL  &kp A  &kp S  &kp D        &kp F             &kp G          &kp H          &kp J           &kp K        &kp L    &kp SEMI  &mt RCTRL SQT
-          &kp LALT   &kp Z  &kp X  &kp C        &kp V             &kp B          &kp N          &kp M           &kp COMMA    &kp DOT  &kp FSLH  &mt RALT BSLH
-                                   &lt RSE TAB  &mt LSHFT ESCAPE  &lt LWR RET    &lt LWR SPACE  &mt RSHFT BSPC  &lt RSE DEL
+&kp LWIN  &kp GRAVE  &kp Q  &kp W  &kp E      &kp R             &kp T        &kp Y        &kp U           &kp I      &kp O    &kp P     &kp LBKT       &mt RWIN RBKT
+          &kp LCTRL  &kp A  &kp S  &kp D      &kp F             &kp G        &kp H        &kp J           &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
+          &kp LALT   &kp Z  &kp X  &kp C      &kp V             &kp B        &kp N        &kp M           &kp COMMA  &kp DOT  &kp FSLH  &mt RALT BSLH
+                                   &lt 2 TAB  &mt LSHFT ESCAPE  &lt 1 RET    &lt 1 SPACE  &mt RSHFT BSPC  &lt 2 DEL
             >;
         };
 
         lower_layer {
             bindings = <
-&trans  &kp UNDER       &kp F1    &kp F2  &kp F3       &kp F4    &kp F5       &kp F6     &kp F7    &kp F8       &kp F9    &kp F10   &kp F11          &mt RGUI F12
-        &mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH     &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR     &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-        &mt LALT EQUAL  &kp N1    &kp N2  &kp N3       &kp N4    &kp N5       &kp N6     &kp N7    &kp N8       &kp N9    &kp N0    &trans
-                                          &lt ADJ TAB  &trans    &trans       &trans     &trans    &lt ADJ DEL
+&trans  &kp UNDER       &kp F1    &kp F2  &kp F3     &kp F4    &kp F5       &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11          &mt RGUI F12
+        &mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR  &mt RCTRL MINUS
+        &mt LALT EQUAL  &kp N1    &kp N2  &kp N3     &kp N4    &kp N5       &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &trans
+                                          &lt 3 TAB  &trans    &trans       &trans     &trans    &lt 3 DEL
             >;
         };
 
-        raise_layer {
+        raise_layer_mac {
             bindings = <
-&kp LC(F19)  &kp LA(F19)  &trans  &kp LG(LA(N5))  &kp LG(LC(LA(LEFT_ARROW)))  &trans         &kp LG(LC(LA(RIGHT)))    &kp C_VOL_UP    &kp HOME        &kp PSCRN  &kp PG_UP  &kp SLCK         &kp F19          &trans
-             &trans       &trans  &trans          &kp LG(LA(LEFT))            &kp LG(LA(F))  &kp LG(LA(RIGHT))        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
-             &trans       &trans  &trans          &kp LG(LS(RETURN))          &trans         &trans                   &kp C_VOL_DN    &kp END         &none      &kp PG_DN  &kp PAUSE_BREAK  &trans
-                                                  &trans                      &trans         &lt ADJ RET              &lt ADJ ESC     &trans          &trans
+&kp LC(F19)  &kp LA(F19)  &trans  &kp LG(LA(N5))  &kp LG(LC(LA(LEFT_ARROW)))  &kp LG(LS(RET))  &kp LG(LC(LA(RIGHT)))    &kp C_VOL_UP    &kp HOME        &kp PSCRN  &kp PG_UP  &kp SLCK         &kp F19          &trans
+             &trans       &trans  &trans          &kp LG(LA(LEFT))            &kp LG(LA(F))    &kp LG(LA(RIGHT))        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
+             &trans       &trans  &trans          &kp LG(C)                   &kp LG(V)        &trans                   &kp C_VOL_DN    &kp END         &none      &kp PG_DN  &kp PAUSE_BREAK  &trans
+                                                  &trans                      &trans           &lt 3 RET                &lt 3 ESC       &trans          &trans
             >;
         };
 
         adjust_layer {
             bindings = <
-&sys_reset  &bootloader  &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &bootloader  &sys_reset
-            &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
-            &none        &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &none
-                                                     &trans        &none         &trans          &trans        &none         &trans
+&sys_reset  &tog 4      &tog 0        &none         &none         &none         &none           &none         &none         &none         &none         &none         &bootloader  &sys_reset
+            &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
+            &none       &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &none
+                                                    &trans        &none         &trans          &trans        &none         &trans
+            >;
+        };
+
+        linux {
+            bindings = <
+&kp LWIN  &kp GRAVE  &kp Q  &kp W  &kp E      &kp R             &kp T        &kp Y        &kp U           &kp I      &kp O    &kp P     &kp LBKT       &mt RWIN RBKT
+          &kp LCTRL  &kp A  &kp S  &kp D      &kp F             &kp G        &kp H        &kp J           &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
+          &kp LALT   &kp Z  &kp X  &kp C      &kp V             &kp B        &kp N        &kp M           &kp COMMA  &kp DOT  &kp FSLH  &mt RALT BSLH
+                                   &lt 5 TAB  &mt LSHFT ESCAPE  &lt 1 RET    &lt 1 SPACE  &mt RSHFT BSPC  &lt 2 DEL
+            >;
+        };
+
+        raise_layer_linux {
+            bindings = <
+&trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)  &kp LG(NUMBER_6)    &kp C_VOL_UP    &kp HOME        &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPSLOCK     &trans
+        &trans            &trans            &trans            &trans            &trans            &trans              &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
+        &trans            &trans            &trans            &kp LC(C)         &kp LC(V)         &trans              &kp C_VOL_DN    &kp END         &none      &kp PG_DN  &kp PAUSE_BREAK  &trans
+                                                              &trans            &trans            &lt 3 RET           &lt 3 ESC       &trans          &trans
             >;
         };
     };
